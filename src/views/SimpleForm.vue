@@ -54,21 +54,17 @@
 
       <h3>Extras</h3>
       <div>
-        <input
-          type="checkbox"
+        <BaseCheckbox
+          label="Catering"
           v-model="event.extras.catering"
-          class="field"
         />
-        <label>Catering</label>
       </div>
 
       <div>
-        <input
-          type="checkbox"
+        <BaseCheckbox
+          label="Live Music"
           v-model="event.extras.music"
-          class="field"
         />
-        <label>Live music</label>
       </div>
 
       <button class="button -fill-gradient" type="submit">Submit</button>
@@ -77,7 +73,9 @@
 </template>
 
 <script>
+import BaseCheckbox from '../components/BaseCheckbox.vue'
 export default {
+  components: { BaseCheckbox },
   data () {
     return {
       categories: [
